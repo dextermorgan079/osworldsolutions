@@ -182,3 +182,27 @@ footer {
   .services-grid, .three-grid, .form-grid, .stat-grid { grid-template-columns: 1fr; }
   .container { width: min(var(--max), calc(100% - 22px)); }
 }
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating-card {
+  animation: floaty 4s ease-in-out infinite;
+}
+.service-card .icon {
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .icon {
+  transform: scale(1.12) rotate(4deg);
+}
+.btn {
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
