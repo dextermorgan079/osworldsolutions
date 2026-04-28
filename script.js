@@ -17,19 +17,3 @@ const elements = document.querySelectorAll('.fade-up');
   });
 
 });
-const reveals = document.querySelectorAll('.reveal');
-
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
-
-  reveals.forEach((item) => {
-    const top = item.getBoundingClientRect().top;
-
-    if (top < windowHeight - 80) {
-      item.classList.add('show');
-    }
-  });
-}
-
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
