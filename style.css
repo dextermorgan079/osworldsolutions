@@ -211,3 +211,14 @@ footer {
   height: auto;
   border-radius: 8px;
 }
+.service-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.service-img:hover {
+  transform: scale(1.05);
+}
